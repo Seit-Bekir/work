@@ -5,7 +5,7 @@ public class task1 {
         int i=0;
         while (true)
         {
-            System.out.println("java");
+            System.out.print("java ");
             i++;
             if (i>=10){break;}
         }
