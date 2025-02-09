@@ -14,7 +14,7 @@ public class Task1 {
         {
             System.out.println("Малоэтажный дом");
         }
-        else if(florCount>=4 && florCount<=8){
+        else if(florCount>4 && florCount<=8){
             System.out.println("Среднеэтажный дом");
         }
         else if(florCount>8)
