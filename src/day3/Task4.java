@@ -20,5 +20,9 @@ public class Task4 {
             if (sum>maxSum){maxSum=sum;index = i;}
         }
         System.out.println("sum = "+maxSum+"\n index = "+index);
+
+
+
+
     }
 }
