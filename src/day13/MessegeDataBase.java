@@ -13,7 +13,8 @@ public class MessegeDataBase {
     public static void showDialog(User u1, User u2) {
         for (Messege messege : messeges) {
             if (messege.getSender() == u1 && messege.getReciver() == u2 || messege.getSender() == u2 && messege.getReciver() == u1) {
-                System.out.println(messege.getSender()+": "+messege.getText());
+               // System.out.println(messege.getSender()+": "+messege.getText());
+                System.out.println(messege);
             }
         }
     }
