@@ -37,6 +37,6 @@ public class Messege {
 
     @Override
     public String toString() {
-        return "FROM: "+getSender()+" to "+getReciver()+"\n "+getText()+"\n "+getData();
+        return "FROM: "+getSender()+" to "+getReciver()+"\n "+getText()+"\ndate: "+getData();
     }
 }
