@@ -9,10 +9,11 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-//        System.out.println(Arrays.toString(parseFileToStringList().toArray()));
-        for (String s : parseFileToStringList()) {
-            System.out.println(s);
-        }
+        System.out.println(Arrays.toString(parseFileToStringList().toArray()));
+//        for (String s : parseFileToStringList()) {
+//            System.out.println(s);
+//        }
+
     }
 
     public static List<String> parseFileToStringList() {
@@ -23,26 +24,18 @@ public class Task2 {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] s = line.split(" ");
-               // for (String str : s) {
-                    try {
-                        int number = Integer.parseInt(s[1]);
-                        if (number < 0) {
-                            throw new RuntimeException();
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Не корректный возраст");
-                        System.exit(0);
-                    } catch (RuntimeException e) {
-                        System.out.println("Некорректный входной файл");
-                        System.exit(0);
-                    }
-                //}
-                stringList.add(line);
 
+                if (Integer.parseInt(s[1]) < 0) {
+                    throw new IllegalArgumentException();
+                }
+                stringList.add(line);
             }
+            return stringList;
         } catch (FileNotFoundException e) {
             System.out.println("File not find");
-        }
-        return stringList;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Некорректный входной файл");
+           // System.exit(0);
+        }return null;
     }
 }
